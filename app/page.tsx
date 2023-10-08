@@ -4,9 +4,11 @@ import NavigationBar from '../components/NavigationBar'
 export default function Home() {
   return (
   <div>
-    <main>
+    <main className='h-screen'>
       <NavigationBar/>
-      <div className='bg-white'></div>
+      <div className=' h-full bg-blue-200 text-black'>
+        <h1>Items</h1>
+      </div>
     </main>
     
   </div>
