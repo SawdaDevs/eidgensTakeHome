@@ -1,7 +1,8 @@
 
 
-import NavigationBar from '../components/NavigationBar'
-interface Product {
+import NavigationBar from '../components/NavigationBar';
+import Card from '@/components/Card';
+type Product = {
   brand: string,
   category: string,
   description: string,
@@ -21,7 +22,7 @@ const getProducts = async():Promise<Product[]| any> =>{
   return products;
 };
 
-const Products = async ()=>{
+const Products = async():Promise<JSX.Element>=>{
   const response = await getProducts();
   const products = response.products;
 
@@ -34,14 +35,16 @@ const Products = async ()=>{
   </ul>
   )
 }
+
 export default async function Home() {
   return (
   <div>
     <main className='h-screen'>
       <NavigationBar/>
-      <div className=' h-full  text-black'>
+      <div className=' h-full text-black'>
         <h1>Items</h1>
         <Products/>
+        <Card/>
       </div>
     </main>
     

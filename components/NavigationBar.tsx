@@ -10,7 +10,7 @@ export default function NavigationBar() {
             <ul className="hidden md:flex gap-x-6 text-white">
               <li>
                 <Link href="/about">
-                  <p>About Us</p>
+                  <p>{'Sawda\'s Take Home Test'}</p>
                 </Link>
               </li>
             </ul>
