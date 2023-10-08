@@ -1,7 +1,7 @@
 
-import { Key } from 'react';
+
 import NavigationBar from '../components/NavigationBar'
-type Product = {
+interface Product {
   brand: string,
   category: string,
   description: string,
@@ -14,9 +14,6 @@ type Product = {
   thumbnail: string,
   title: string
 }
-type APIResponse = {
-  "products":Product[]
-}
 const getProducts = async():Promise<Product[]| any> =>{
   const data = await fetch('https://dummyjson.com/products')
   const products = await data.json();
@@ -28,7 +25,7 @@ const Products = async ()=>{
   const response = await getProducts();
   const products = response.products;
 
-  console.log('thiss is prds', products)
+  console.log('this is prds', products)
   return(
     <ul>
     {products.map((product:Product) => (
@@ -42,7 +39,7 @@ export default async function Home() {
   <div>
     <main className='h-screen'>
       <NavigationBar/>
-      <div className=' h-full bg-blue-200 text-black'>
+      <div className=' h-full  text-black'>
         <h1>Items</h1>
         <Products/>
       </div>
