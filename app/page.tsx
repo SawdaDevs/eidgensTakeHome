@@ -2,19 +2,7 @@
 
 import NavigationBar from '../components/NavigationBar';
 import Card from '@/components/Card';
-type Product = {
-  brand: string,
-  category: string,
-  description: string,
-  discountPercentage: number,
-  id: number,
-  images: string[],
-  price: number,
-  rating: number,
-  stock: number,
-  thumbnail: string,
-  title: string
-}
+import { Product } from '@/types/productTypes';
 const getProducts = async():Promise<Product[]| any> =>{
   const data = await fetch('https://dummyjson.com/products')
   const products = await data.json();
@@ -28,11 +16,11 @@ const Products = async():Promise<JSX.Element>=>{
 
   console.log('this is prds', products)
   return(
-    <ul>
-    {products.map((product:Product) => (
-      <li key={product.id}>{product.title}</li>
-    ))}
-  </ul>
+    <div className=' absolute h-full w-full justify-between grid grid-cols-7  gap-3 '>
+      {products.map((product:Product) => (
+        <Card productInfo={product} key={product.id}/> 
+      ))}
+    </div>
   )
 }
 
@@ -41,11 +29,15 @@ export default async function Home() {
   <div>
     <main className='h-screen'>
       <NavigationBar/>
-      <div className=' h-full text-black'>
-        <h1>Items</h1>
-        <Products/>
-        <Card/>
-      </div>
+      <section className=' w-full mx-auto justify-end'>
+        <h1 className='text-violet-900 text-4xl font-extrabold'>Items</h1>
+      </section>
+      <section>
+      <div className=' h-full w-full'>
+          <Products/>
+        </div>
+      </section>
+
     </main>
     
   </div>
