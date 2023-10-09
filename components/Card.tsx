@@ -32,7 +32,7 @@ export default async function Card(props: { productInfo:Product } ) {
         </>
         :
         <>
-            <p>Bye</p>
+            <h2>{props.productInfo.title} </h2>
         </>
     )
 }
