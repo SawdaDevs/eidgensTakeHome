@@ -12,13 +12,14 @@ export default async function ProductPage({ params }: { params: { id: number } }
     };
 
     console.log('\n', getProduct())
-
     const product = await getProduct()
 
     return (
         <main className='h-screen'>
-            <NavigationBar/>
-            <Card productInfo={product}/>
+                <NavigationBar/>
+            <section className="h-screen container p-3">
+                <Card productInfo={product}/>
+            </section>
         </main>
     );
   }
