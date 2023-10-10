@@ -15,7 +15,7 @@ export default function Card(props: {productInfo:Product} ) {
             <div className=" flex flex-col w-52 h-60 border border-gray-300 rounded-xl p-2 min-w-fit shadow shadow-gray-300 hover:shadow-md hover:shadow-purple-800/70 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105 relative"
             >
                 <div className="h-1/6 p-1 justify-start">
-                    <h2 className="text-gray-600 justify-start line-clamp-1 text-2xl font-semibold drop-shadow-md  indent-0.5 p-1">
+                    <h2 className="text-gray-600 justify-start line-clamp-1 text-2xl font-semibold indent-0.5 p-1">
                         {props.productInfo.title}
                     </h2>
                 </div>
@@ -42,9 +42,9 @@ export default function Card(props: {productInfo:Product} ) {
         </div>
         :
         <>
-            <div className=" flex flex-col w-100 min-w-fit min-h-fit h-5/6 border border-gray-300 rounded-xl shadow-md p-1 text-ellipsis overflow-hidden">
+            <div className=" flex flex-col w-100 min-w-fit min-h-fit h-5/6 border border-gray-300 rounded-xl shadow-md p-1 absolute text-ellipsis overflow-hidden hover:shadow-md hover:shadow-purple-800/70">
                 <div className="h-1/6 p-1  text-gray-600 flex flex-row justify-between">
-                <div className="p-3 w-2/3 ">
+                <div className="p-3 w-2/3  ">
                     <h1 className="justify-start text-3xl drop-shadow-md font-semibold indent-0.5">
                         {props.productInfo.title}
                     </h1>
@@ -52,15 +52,18 @@ export default function Card(props: {productInfo:Product} ) {
                     {props.productInfo.brand}
                     </h3>
                 </div>
-                <div className="p-3 w-1/3 border rounded-xl border-gray-100/50 flex place-self-center shadow">
+                <div className="p-3 w-1/3 min-w-fit min-h-fit flex flex-col border rounded-xl border-gray-100/50 content-center justify-items-center place-items-center place-self-center shadow ">
                     <h3 className="p-3 text-right">
-                        Price {props.productInfo.price} + {props.productInfo.discountPercentage}%
+                        Price £{props.productInfo.price}
                     </h3>
+                    <p className="font-thin line-through  text-gray-600/50">
+                    Original: {Math.floor(props.productInfo.price * (1 + (props.productInfo.discountPercentage/100)))}
+                    </p>
                 </div>
 
                 </div>
                 <div className="h-1/6 p-2 text-gray-800 ">
-                    <p className=" text-md font-light p-3 text-center">
+                    <p className=" text-md font-medium p-3 text-center">
                         {props.productInfo.description}
                     </p>
                     <p className=" text-md font-light text-right p-3">
