@@ -12,7 +12,7 @@ export default async function Home() {
   console.log("this is products", products);
 
   return (
-  <div className='w-screen h-screen p-1 border-1 bg-gradient-to-b from-violet-100/10 to-gray-100/10'>
+  <div className='w-screen h-screen p-1 border-1 bg-neutral-50'>
     <main className='h-full'>
       <NavigationBar/>
       <section className='w-full px-2 py-3 flex justify-items-center justify-start'>
