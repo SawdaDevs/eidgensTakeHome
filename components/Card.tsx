@@ -41,30 +41,30 @@ export default function Card(props: {productInfo:Product} ) {
 
         </div>
         :
-        <div className=" flex flex-col w-full h-full min-w-fit min-h-fit border border-gray-300 rounded-xl shadow-md p-1 text-ellipsis overflow-hidden hover:shadow-md hover:shadow-purple-800/70 relative">
-            <div className="h-1/6 p-1  text-gray-600 flex flex-row justify-between">
+        <div className="flex flex-col shrink w-full h-full min-w-min min-h-min border border-gray-300 rounded-xl shadow-md p-1 text-ellipsis overflow-hidden hover:shadow-md hover:shadow-purple-800/70 relative">
+            <div className="h-1/6 p-1  text-gray-600 flex flex-row justify-between relative">
             <div className="p-3 w-2/3">
                 <h1 className="justify-start text-3xl drop-shadow-md font-semibold indent-0.5">
                     {props.productInfo.title}
                 </h1>
                 <h3 className="text-xs font-thin indent-1">
-                {props.productInfo.brand}
+                    {props.productInfo.brand}
                 </h3>
             </div>
-            <div className="p-3 w-1/3 min-w-fit min-h-fit flex flex-col border rounded-xl border-gray-100/50 content-center justify-items-center place-items-center place-self-center shadow ">
-                <h3 className="p-3 text-right">
+            <div className="p-3 w-1/3 h-full max-w-full flex flex-col flex-shrink border rounded-xl border-gray-100/50 place-content-center place-items-center shadow text-ellipsis overflow-hidden">
+                <h3 className="text-xs sm:text-xl">
                     Price £{props.productInfo.price}
                 </h3>
-                <p className="font-thin line-through  text-gray-600/50">
+                <p className="font-thin line-through text-gray-600/50 text-xs sm:text-lg">
                 Original: {Math.floor(props.productInfo.price * (1 + (props.productInfo.discountPercentage/100)))}
                 </p>
             </div>
             </div>
-            <div className="h-1/6 p-2 text-gray-800 ">
-                <p className=" text-md font-medium p-3 text-center">
+            <div className="h-1/6 flex flex-col w-full p-2 text-gray-800 ">
+                <p className="h-1/2 text-xs p-1 text-ellipsis overflow-scroll">
                     {props.productInfo.description}
                 </p>
-                <p className=" text-md font-light text-right p-3">
+                <p className="h-1/2 text-xs font-light text-right p-1">
                     Rating: {props.productInfo.rating}/5
                 </p>
             </div>
