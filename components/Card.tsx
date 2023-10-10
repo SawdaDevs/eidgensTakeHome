@@ -12,7 +12,7 @@ export default function Card(props: {productInfo:Product} ) {
         isHome ?
         <div>
             <Link href={`/product/${props.productInfo.id}`}>
-            <div className="w-50 h-80 flex flex-col border border-gray-300 rounded-xl p-2 min-w-fit shadow shadow-gray-300 hover:shadow-md hover:shadow-purple-800/70 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105"
+            <div className="w-50 h-80 sm:w-60 sm:h-90 flex flex-col border border-gray-300 rounded-xl p-2 min-w-fit shadow shadow-gray-300 hover:shadow-md hover:shadow-purple-800/70 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105"
             >
                 <div className="h-1/6 p-1 justify-start">
                     <h2 className="text-gray-600 justify-start line-clamp-1 text-2xl sm:text-3xl font-semibold indent-0.5">

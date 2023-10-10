@@ -21,7 +21,7 @@ export default async function Home() {
           Items
         </h1>
       </section>
-      <section className='w-full px-2 py-1 flex justify-items-center justify-start'>
+      <section className='w-full px-2 py-1 flex place-content-center place-items-center'>
           <div className='max-w-full mx-1 px-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 place-content-center'>
             {products.map((product:Product) =>(
               <div key={product.id}>
