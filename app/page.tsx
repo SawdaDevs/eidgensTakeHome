@@ -12,19 +12,16 @@ export default async function Home() {
   console.log("this is products", products);
 
   return (
-  <div className='w-screen h-screen'>
+  <div className='w-screen h-screen p-1'>
     <main className='h-full'>
       <NavigationBar/>
-      <section className='w-full mx-10 my-3 justify-start'>
-        <h1 className='text-violet-900 text-4xl font-extrabold'>Items</h1>
+      <section className='w-full px-2 py-3 flex justify-items-center justify-start'>
+        <h1 className=' px-16 text-violet-900 text-4xl font-extrabold'>Items</h1>
       </section>
-      <section className=''>
-        <div className='min-w-fit m-2'>
-          <div className=' w-full mx-10 my-2 flex flex-wrap gap-4 justify-items-center'>
+      <section className='w-full px-2 py-3 flex justify-items-center justify-start'>
+          <div className='min-w-fit max-w-full mx-1 px-3 py-2 flex flex-wrap gap-4 place-content-center'>
             {products.map((product:Product) =>(<Card productInfo={product} key={product.id}/>))}
           </div>
-        </div>
-
       </section>
 
     </main>

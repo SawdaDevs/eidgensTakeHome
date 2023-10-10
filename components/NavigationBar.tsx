@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export default function NavigationBar() {
   return (
-    <div className='h-1/6 min-w-fit max-w-full' >
+    <div className='h-1/6 min-w-fit max-w-full'>
         <div className=" w-full h-full bg-violet-900/75 sticky top-0 rounded mx-auto px-4 ">
           <div className="flex justify-between items-center h-full backdrop-blur">
             <Link href="/">
