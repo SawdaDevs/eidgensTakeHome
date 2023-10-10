@@ -16,7 +16,7 @@ export default async function Home() {
     <main className='h-full'>
       <NavigationBar/>
       <section className='w-full px-2 py-3 flex justify-items-center justify-start'>
-        <h1 className=' px-16 text-slate-800 text-3xl font-bold'>
+        <h1 className=' px-16 text-gray-800 text-3xl font-bold'>
           Items
         </h1>
       </section>
