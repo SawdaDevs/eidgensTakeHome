@@ -16,10 +16,12 @@ export default async function Home() {
     <main className='h-full'>
       <NavigationBar/>
       <section className='w-full px-2 py-3 flex justify-items-center justify-start'>
-        <h1 className=' px-16 text-violet-900 text-4xl font-extrabold'>Items</h1>
+        <h1 className=' px-16 text-violet-900 text-3xl font-bold'>
+          Items
+        </h1>
       </section>
-      <section className='w-full px-2 py-3 flex justify-items-center justify-start'>
-          <div className='min-w-fit max-w-full mx-1 px-3 py-2 flex flex-wrap gap-4 place-content-center'>
+      <section className='w-full px-2 py-1 flex justify-items-center justify-start'>
+          <div className='min-w-fit max-w-full mx-1 px-1 flex flex-wrap gap-4 place-content-center'>
             {products.map((product:Product) =>(<Card productInfo={product} key={product.id}/>))}
           </div>
       </section>
