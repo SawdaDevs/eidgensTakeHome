@@ -1,4 +1,4 @@
-import HomeButton from "@/components/Button";
+import HomeButton from "@/components/HomeButton";
 import Card from "@/components/Card";
 import NavigationBar from "@/components/NavigationBar";
 import { Product } from "@/types/productTypes";
