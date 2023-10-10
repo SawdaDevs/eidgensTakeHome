@@ -42,7 +42,7 @@ export default function Card(props: {productInfo:Product} ) {
         </div>
         :
         <>
-            <div className=" flex flex-col w-100 min-w-fit min-h-fit h-5/6 border border-gray-300 rounded-xl shadow-md p-1 absolute text-ellipsis overflow-hidden hover:shadow-md hover:shadow-purple-800/70">
+            <div className=" flex flex-col w-full h-full min-w-fit min-h-fit border border-gray-300 rounded-xl shadow-md p-1 text-ellipsis overflow-hidden hover:shadow-md hover:shadow-purple-800/70 relative">
                 <div className="h-1/6 p-1  text-gray-600 flex flex-row justify-between">
                 <div className="p-3 w-2/3  ">
                     <h1 className="justify-start text-3xl drop-shadow-md font-semibold indent-0.5">
