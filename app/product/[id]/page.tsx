@@ -11,7 +11,7 @@ export default async function ProductPage({ params }: { params: { id: number } }
     return (
         <main className='h-screen'>
                 <NavigationBar/>
-            <section className="w-full h-full flex flex-col flex-initial absolute p-3">
+            <section className="w-full h-full flex flex-col absolute p-3">
                 <div className="w-5/6 h-5/6 content-center self-center">
                     <Card productInfo={product}/>
                 </div>

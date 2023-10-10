@@ -13,7 +13,7 @@ export default async function Home() {
   console.log("this is products", products);
 
   return (
-  <div className='w-screen h-screen p-1 border-1'>
+  <div className='w-full h-full p-1 border-1'>
     <main className='h-full'>
       <NavigationBar/>
       <section className='w-full px-2 py-3 flex justify-items-center justify-start'>
@@ -22,9 +22,9 @@ export default async function Home() {
         </h1>
       </section>
       <section className='w-full px-2 py-1 flex justify-items-center justify-start'>
-          <div className='min-w-fit max-w-full mx-1 px-1 flex flex-wrap gap-4 place-content-center'>
+          <div className='max-w-full mx-1 px-1 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 place-content-center'>
             {products.map((product:Product) =>(
-              <div className='w-1/6' key={product.id}>
+              <div key={product.id}>
                 <Card productInfo={product} key={product.id}/>  
               </div>
             ))}

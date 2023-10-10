@@ -12,19 +12,19 @@ export default function Card(props: {productInfo:Product} ) {
         isHome ?
         <div>
             <Link href={`/product/${props.productInfo.id}`}>
-            <div className="flex flex-col border relative border-gray-300 rounded-xl p-2 min-w-fit shadow shadow-gray-300 hover:shadow-md hover:shadow-purple-800/70 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105"
+            <div className="w-50 h-80 flex flex-col border border-gray-300 rounded-xl p-2 min-w-fit shadow shadow-gray-300 hover:shadow-md hover:shadow-purple-800/70 transition ease-in-out delay-50 hover:-translate-y-1 hover:scale-105"
             >
                 <div className="h-1/6 p-1 justify-start">
-                    <h2 className="text-gray-600 justify-start line-clamp-1 text-2xl font-semibold indent-0.5 p-1">
+                    <h2 className="text-gray-600 justify-start line-clamp-1 text-2xl sm:text-3xl font-semibold indent-0.5">
                         {props.productInfo.title}
                     </h2>
                 </div>
-                <div className="h-1/6 p-1 ">
-                    <p className="text-gray-800 text-sm font-thin line-clamp-2 break-words leading-snug p-1">
+                <div className="h-1/6 p-1">
+                    <p className="p-0.5 text-gray-800 text-xs sm:text-sm font-thin line-clamp-1 md:line-clamp-2 text-ellipsis overflow-clip leading-snug">
                         {props.productInfo.description}
                     </p>
                 </div>
-                <div className="h-4/6 w-full flex justify-center justify-items-center relative p-3">
+                <div className="h-4/6 w-full flex justify-center justify-items-center">
                     <div className="w-full h-full relative p-1 img-wrapper drop-shadow-md">
                         <Image className="max-h-full rounded"
                             alt={props.productInfo.title}
