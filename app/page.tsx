@@ -12,11 +12,11 @@ export default async function Home() {
   console.log("this is products", products);
 
   return (
-  <div className='w-screen h-screen p-1 border-1 bg-neutral-50'>
+  <div className='w-screen h-screen p-1 border-1'>
     <main className='h-full'>
       <NavigationBar/>
       <section className='w-full px-2 py-3 flex justify-items-center justify-start'>
-        <h1 className=' px-16 text-violet-900 text-3xl font-bold'>
+        <h1 className=' px-16 text-slate-800 text-3xl font-bold'>
           Items
         </h1>
       </section>
